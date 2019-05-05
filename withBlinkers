@@ -1,0 +1,61 @@
+from adafruit_circuitplayground.express import cpx
+import time
+# slide the switch and see the red lights or
+# turn the slide switch off and use your blinkers
+
+while True:
+
+    if cpx.switch:
+
+        cpx.pixels[0] = (0, 0, 0)
+        cpx.pixels[5] = (0, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[1] = (0, 0, 0)
+        cpx.pixels[6] = (0, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[2] = (0, 0, 0)
+        cpx.pixels[7] = (0, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[3] = (0, 0, 0)
+        cpx.pixels[8] = (0, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[4] = (0, 0, 0)
+        cpx.pixels[9] = (0, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[0] = (100, 0, 0)
+        cpx.pixels[5] = (100, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[1] = (100, 0, 0)
+        cpx.pixels[6] = (100, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[2] = (100, 0, 0)
+        cpx.pixels[7] = (100, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[3] = (100, 0, 0)
+        cpx.pixels[8] = (100, 0, 0)
+        time.sleep(.1)
+        cpx.pixels[4] = (100, 0, 0)
+        cpx.pixels[9] = (100, 0, 0)
+        time.sleep(.1)
+        # right blinker
+    elif cpx.button_a:
+        cpx.pixels[0] = (100, 100, 0)
+        cpx.pixels[1] = (100, 100, 0)
+        cpx.pixels[2] = (100, 100, 0)
+        cpx.pixels[3] = (100, 100, 0)
+        cpx.pixels[4] = (100, 100, 0)
+        time.sleep(.25)
+        cpx.pixels.fill((0, 0, 0))
+        time.sleep(.25)
+        # left blinker
+    elif cpx.button_b:
+        cpx.pixels[5] = (100, 100, 0)
+        cpx.pixels[6] = (100, 100, 0)
+        cpx.pixels[7] = (100, 100, 0)
+        cpx.pixels[8] = (100, 100, 0)
+        cpx.pixels[9] = (100, 100, 0)
+        time.sleep(.25)
+        cpx.pixels.fill((0, 0, 0))
+        time.sleep(.25)
+    else:
+        cpx.pixels.fill((0, 0, 0))
